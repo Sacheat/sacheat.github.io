@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon portfiolo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+<header class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50 transition-all">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-indigo-600 tracking-wide">Sacha Libion</a>
+
+        <!-- Menu desktop -->
+        <ul class="hidden md:flex space-x-8 font-medium">
+            <li><a href="#about" class="relative group">À propos
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a href="#skills" class="relative group">Compétences
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a href="#projects" class="relative group">Projets
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a href="#contact" class="relative group">Contact
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
+            </a></li>
+            <li><a href="cv.html" class="relative group">Mon CV
+                <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-indigo-600 transition-all group-hover:w-full"></span>
+            </a></li>
+        </ul>
+
+        <!-- Menu burger mobile -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="menu" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-md">
+        <ul class="flex flex-col items-center space-y-4 py-6 font-medium">
+            <li><a href="#about" class="hover:text-indigo-600">À propos</a></li>
+            <li><a href="#skills" class="hover:text-indigo-600">Compétences</a></li>
+            <li><a href="#projects" class="hover:text-indigo-600">Projets</a></li>
+            <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+            <li><a href="cv.html" class="hover:text-indigo-600">Mon CV</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+        <!-- Section Hero -->
+        <section class="relative min-h-screen flex flex-col justify-center items-center text-center text-white px-6">
+            <!-- Image de fond -->
+            <img src="image/codeBackground.jpg"
+                 alt="Background"
+                 class="absolute inset-0 w-full h-full object-cover opacity-30">
+
+            <!-- Overlay sombre -->
+            <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70"></div>
+
+            <!-- Contenu -->
+            <div class="relative z-10 max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fadeIn">
+                    Salut, je suis <span class="text-indigo-400">Sacha</span>
+                </h1>
+                <!-- Texte animé + curseur -->
+                <p class="text-lg md:text-xl text-gray-200 mb-6">
+                    <span id="typing"></span>
+                    <span class="inline-block w-[2px] h-6 bg-indigo-400 ml-1 animate-blink"></span>
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#projects"
+                       class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition">
+                        Voir mes projets 🚀
+                    </a>
+                    <a href="#contact"
+                       class="px-6 py-3 bg-gray-200 text-gray-900 rounded-lg shadow hover:bg-gray-300 transform hover:scale-105 transition">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section À propos -->
+        <section id="about" class="py-20 bg-gray-50 pt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 flex justify-center md:justify-start">
+                    <span class="relative inline-block pb-2">
+                        <span class="relative z-10">À propos</span>
+                        <span class="absolute bottom-0 left-0 w-full h-1 bg-indigo-500 rounded"></span>
+                    </span>
+                </h2>
+
+
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                    <!-- Photo -->
+                    <div class="flex-shrink-0 mb-6 md:mb-0">
+                        <img src="image/photoProfil.png" alt="Photo de Sacha"
+                             class="w-40 h-40 object-cover rounded-full shadow-md border-4 border-indigo-500">
+                    </div>
+
+                    <!-- Texte -->
+                    <div class="text-gray-700 text-center md:text-left">
+                        <p class="leading-relaxed mb-4">
+                            Je m’appelle <span class="font-semibold">Sacha</span>, j’ai 23 ans et je poursuis actuellement un
+                            bachelier en <strong>Informatique – orientation développement d’applications</strong>.
+                            Passionné par le <strong>développement Full Stack</strong>, j’aime concevoir des solutions numériques modernes et efficaces,
+                            en explorant aussi bien le <em>back-end</em> que le <em>front-end</em>.
+                        </p>
+
+                        <p class="leading-relaxed mb-4">
+                            En dehors de mes études, je m’intéresse au <i class="fa-solid fa-futbol text-indigo-500"></i>
+                            <strong>football</strong>, aux <i class="fa-solid fa-gamepad text-indigo-500"></i>
+                            <strong>jeux vidéo</strong> et à la <i class="fa-solid fa-utensils text-indigo-500"></i>
+                            <strong>cuisine</strong>.
+                            Ces passions m’apprennent la créativité, la rigueur et l’esprit d’équipe.
+                        </p>
+
+                        <p class="leading-relaxed">
+                            Je travaille également comme <strong>étudiant en cuisine</strong>, une expérience qui m’a appris
+                            <span class="font-semibold">le goût du travail bien fait et l’organisation</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="skills" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 pt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 flex justify-center md:justify-start">
+                    <span class="relative inline-block pb-2">
+                        <span class="relative z-10">Compétences</span>
+                        <span class="absolute bottom-0 left-0 w-full h-1 bg-indigo-500 rounded"></span>
+                    </span>
+                </h2>
+
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Langages -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 flex items-center gap-2">
+                            <i class="fa-solid fa-code"></i> Langages
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-medium">Java</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="80"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">HTML / CSS</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="100"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">JavaScript (POO)</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="50"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">PHP</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="50"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bases de données -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 flex items-center gap-2">
+                            <i class="fa-solid fa-database"></i> Bases de données
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-medium">MySQL</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="75"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">Hibernate / Spring Boot</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="40"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">Thymeleaf</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="40"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Réseaux -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 flex items-center gap-2">
+                            <i class="fa-solid fa-network-wired"></i> Réseaux
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-medium">Cisco (Switchs & Routeurs)</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="65"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">Serveurs Windows / Linux</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="65"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-medium">VM (Debian, Ubuntu)</p>
+                                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-indigo-600 h-3 rounded-full w-0 transition-all duration-1000" data-skill="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outils & Méthodologies -->
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 flex items-center gap-2">
+                            <i class="fa-solid fa-tools"></i> Outils
+                        </h3>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">Git / GitHub</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">IntelliJ IDEA</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">VS Code</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">PhpStorm</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">DBeaver</span>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4 text-indigo-600 flex items-center gap-2">
+                            <i class="fa-solid fa-project-diagram"></i> Méthodologies
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">MVC</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">POO</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">UML</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">MLD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projects" class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 pt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 flex justify-center md:justify-start">
+                    <span class="relative inline-block pb-2">
+                        <span class="relative z-10">Projets</span>
+                        <span class="absolute bottom-0 left-0 w-full h-1 bg-indigo-500 rounded"></span>
+                    </span>
+                </h2>
+
+
+                <!-- Ligne 1 (3 cartes en grille) -->
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Projet 1 -->
+                    <div class="project-card bg-white rounded-xl shadow-md hover:shadow-xl transition group overflow-hidden opacity-0 translate-y-6">
+                        <div class="relative overflow-hidden">
+                            <img src="image/mockUpSGBD.jpg" alt="Logiciel de gestion de commandes" class="rounded-t-xl transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Logiciel de gestion de commandes</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">Java</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">Swing</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">MySQL</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Application Java Swing avec architecture MVC et base MySQL.
+                                Permet de gérer les tables, commandes et statistiques d’un restaurant.
+                            </p>
+                            <div class="flex space-x-3">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="project-card bg-white rounded-xl shadow-md hover:shadow-xl transition group overflow-hidden opacity-0 translate-y-6">
+                        <div class="relative overflow-hidden">
+                            <img src="image/mockUpSGBD.jpg" alt="Application Web SGBD" class="rounded-t-xl transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Application Web de gestion</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">Java</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">Spring Boot</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">Hibernate</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">Thymeleaf</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Projet Java, Spring Boot, Hibernate et Thymeleaf.
+                                Gestion d’articles, catégories et commandes via une base de données relationnelle.
+                            </p>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="project-card bg-white rounded-xl shadow-md hover:shadow-xl transition group overflow-hidden opacity-0 translate-y-6">
+                        <div class="relative overflow-hidden">
+                            <img src="image/mockUpMeteo.jpg" alt="Site météo API" class="rounded-t-xl transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Site météo avec API</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">HTML</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">CSS</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">JavaScript</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">PHP</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">API</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Site en HTML, CSS, JavaScript et PHP, consommant une API météo
+                                pour afficher en temps réel les conditions et prévisions.
+                            </p>
+                            <div class="flex space-x-3">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">GitHub</a>
+                                <a href="http://students2.promotion-sociale-marche.be/libionsa/TP2/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300 transition">Démo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 2 (2 cartes centrées) -->
+                <div class="mt-8 lg:col-span-3 flex flex-col md:flex-row justify-center gap-8">
+                    <!-- Projet 4 -->
+                    <div class="project-card bg-white rounded-xl shadow-md hover:shadow-xl transition group overflow-hidden opacity-0 translate-y-6 max-w-xl w-full md:w-[32rem]">
+                        <div class="relative overflow-hidden">
+                            <img src="image/mockUpWordpress.jpg" alt="Site WordPress hôtel" class="rounded-t-xl transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Site WordPress Hôtel</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">WordPress</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">SEO</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">Design</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Réalisation d’un site WordPress complet pour un manoir/hôtel,
+                                avec design moderne et système de réservation via formulaire.
+                            </p>
+                            <a href="https://aumanoirdesvalles.com/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Démo</a>
+                        </div>
+                    </div>
+
+                    <!-- Projet 5 -->
+                    <div class="project-card bg-white rounded-xl shadow-md hover:shadow-xl transition group overflow-hidden opacity-0 translate-y-6 max-w-xl w-full md:w-[32rem]">
+                        <div class="relative overflow-hidden">
+                            <img src="image/mockUpSGBD.jpg" alt="Mini-jeu JS" class="rounded-t-xl transform group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Mini-jeu JavaScript</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">JavaScript</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">HTML</span>
+                                <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-600 rounded-full">CSS</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Petit jeu interactif en JavaScript pour illustrer mes compétences front-end et l'interactivité.
+                                (Prochainement disponible)
+                            </p>
+                            <a href="#playground" class="px-4 py-2 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300 transition">Jouer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-indigo-100 pt-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-6 text-center">
+                    <span class="relative inline-block pb-2">
+                        <span class="relative z-10">Contact</span>
+                        <span class="absolute bottom-0 left-0 w-full h-1 bg-indigo-500 rounded"></span>
+                    </span>
+                </h2>
+
+                <p class="text-gray-700 max-w-2xl mx-auto mb-12">
+                    Tu veux échanger avec moi ? N’hésite pas à m’envoyer un message via le formulaire
+                    ou à me retrouver sur mes réseaux
+                </p>
+
+                <!-- Formulaire -->
+                <form action="https://formspree.io/f/mayplxyz" method="POST"
+                      class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="mb-5">
+                        <label for="name" class="block text-left text-gray-700 mb-2">Nom</label>
+                        <div class="flex items-center border rounded-lg px-3 focus-within:ring-2 focus-within:ring-indigo-500">
+                            <i class="fa-solid fa-user text-gray-400 mr-2"></i>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-2 py-3 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="email" class="block text-left text-gray-700 mb-2">Email</label>
+                        <div class="flex items-center border rounded-lg px-3 focus-within:ring-2 focus-within:ring-indigo-500">
+                            <i class="fa-solid fa-envelope text-gray-400 mr-2"></i>
+                            <input type="email" id="email" name="_replyto" required
+                                   class="w-full px-2 py-3 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="message" class="block text-left text-gray-700 mb-2">Message</label>
+                        <div class="flex items-start border rounded-lg px-3 focus-within:ring-2 focus-within:ring-indigo-500">
+                            <i class="fa-solid fa-comment text-gray-400 mt-3 mr-2"></i>
+                            <textarea id="message" name="message" rows="4" required maxlength="500"
+                                      class="w-full px-2 py-3 focus:outline-none"></textarea>
+                        </div>
+                        <p id="charCount" class="text-sm text-gray-500 mt-1">0 / 500</p>
+                    </div>
+
+                    <button type="submit"
+                            class="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition transform hover:scale-[1.02]">
+                        <i class="fa-solid fa-paper-plane"></i> Envoyer
+                    </button>
+                </form>
+
+                <!-- Liens de contact -->
+                <div class="flex flex-wrap justify-center gap-6 mt-12">
+                    <a href="mailto:sacha.libion@outlook.com"
+                       class="flex items-center gap-2 px-6 py-3 rounded-full bg-indigo-600 text-white shadow hover:bg-indigo-700 transition">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                    <a href="https://github.com/Sacheat" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-200 text-gray-900 hover:bg-gray-300 transition">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-200 text-gray-900 hover:bg-gray-300 transition">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://discord.com/users/sacheat420" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-200 text-gray-900 hover:bg-gray-300 transition">
+                        <i class="fa-brands fa-discord"></i> Discord
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <script src="scriptDeco.js"></script>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-700 text-white py-6 text-center pt-24">
+        <p>© 2025 - Sacha Libion. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
