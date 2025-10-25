@@ -9,7 +9,7 @@ import Game from "./Game.js";
 import { GAME_MODES, GAME_MODE_LIST } from "./Mode.js";
 import { BONUS_CATALOG } from "./Bonus.js";
 
-(() => {
+((mode, userName) => {
     // --- Instances système
     const ui = new UI(document);
     const audio = new AudioManager({
@@ -104,4 +104,11 @@ import { BONUS_CATALOG } from "./Bonus.js";
 
     // Bouton “Rejouer”
     document.getElementById("replayBtn")?.addEventListener("click", () => game.restart());
+
+    window.startGame = function(mode) {
+        // appelle ta logique du jeu ici
+        const game = new Game(mode);
+        game.start(mode, userName);
+    };
+
 })();
