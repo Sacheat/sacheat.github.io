@@ -1,0 +1,55 @@
+/* Animation douce des cards */
+#rulesCard, #leaderboardCard, #bonusCard {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#rulesCard:hover, #leaderboardCard:hover, #bonusCard:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Leaderboard entries */
+#leaderboardList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(55,65,81,0.5); /* gris semi transparent */
+    transition: background 0.2s ease;
+}
+#leaderboardList li:hover {
+    background: rgba(99,102,241,0.6); /* violet/indigo clair au hover */
+}
+#leaderboardList li span:first-child {
+    font-weight: 600;
+}
+#leaderboardList li span:last-child {
+    color: #60a5fa; /* bleu clair pour les scores */
+    font-weight: bold;
+}
+
+/* Bonus/Malus liste */
+#bonusList div {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(75,85,99,0.6);
+}
+#bonusList strong {
+    color: #facc15; /* jaune or */
+}
+
+/* Flèches leaderboard */
+#prevMode, #nextMode {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+#prevMode:hover, #nextMode:hover {
+    transform: scale(1.1);
+    background: rgba(75,85,99,0.8);
+}
+
+
+@keyframes pulseLight {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+.animate-pulseLight {
+    animation: pulseLight 2s ease-in-out infinite;
+}
